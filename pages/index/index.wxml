@@ -1,0 +1,62 @@
+<!--index.wxml-->
+        <!--header-->
+
+
+<view class="container">
+
+    <view class="header">
+        <image src="../../static/headPortrait.jpg" class="headPortrait" mode="cover" animation="{{animation}}"></image>
+    </view>
+
+    <!--centent-->
+    <view class="centent">
+        <view class="cake">
+            <view class="plate"></view>
+            <view class="layer layer-bottom"></view>
+            <view class="layer layer-middle"></view>
+            <view class="layer layer-top">
+                <view class="blessing" wx:if="{{showBlessing%3==0}}">
+                    <text>Happy Birthday!</text>
+                </view>
+                <view class="blessing" wx:if="{{showBlessing%3==1}}">
+                    <text>Happy Every Day!</text>
+                </view>
+                <view class="blessing" wx:if="{{showBlessing%3==2}}">
+                    <text>Lucky Every Day!</text>
+                </view>
+            </view>
+            <view class="icing"></view>
+            <view class="drip drip-1"></view>
+            <view class="drip drip-2"></view>
+            <view class="drip drip-3"></view>
+            <view class="candle">
+                <view class="flame"></view>
+            </view>
+        </view>
+    </view>
+    <view class="ani-snow">
+        <block wx:for="{{50}}" wx:for-item="index" wx:for-index="__i0__" wx:key="*this">
+            <view class="snowflake"></view>
+        </block>
+    </view>
+    <!--footer-->
+    <view class="footer">
+        <view>
+            <view bindtap="previousSong" class="song">
+                <image src="../../static/rose.png" class="roseLeft"></image>
+                <image src="../../static/rose.png" class="roseLeft2"></image>
+                <image src="../../static/rose.png" class="roseLeft3"></image>
+            </view>
+            <view bindtap="nextSong" class="song">
+                <image src="../../static/rose.png" class="roseRight"></image>
+                <image src="../../static/rose.png" class="roseRight2"></image>
+                <image src="../../static/rose.png" class="roseRight3"></image>
+            </view>
+        </view>
+        <view class='{{showLove ?"shwoLove":"noShowLove"}}'>
+            <text>开心值+{{loveNum}}\n\n熬夜值-{{loveNum}}\n\n\n</text>
+        </view>
+        <text>世界已经有你\n</text>
+        <text>{{dateTime}}</text>
+    </view>
+</view>
