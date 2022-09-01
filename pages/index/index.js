@@ -18,15 +18,15 @@ Page({
         showBlessing: -1,
         audio: '',
         songIndex: 0,
-        songNum: 10,
+        songNum: 3,
         loveNum: 0,
         showLove: false,
     },
     onLoad() {
         // 初始化音乐
         var audio = wx.createInnerAudioContext()
-        // audio.src = this.data.audioUrl[Math.floor(Math.random() * this.data.songNum)]; // src 可以设置 http(s) 的路径，本地文件路径或者代码包文件路径
-        audio.src = 'http://music.163.com/song/media/outer/url?id=1808492017.mp3'
+        audio.src = this.data.audioUrl[Math.floor(Math.random() * this.data.songNum)]; // src 可以设置 http(s) 的路径，本地文件路径或者代码包文件路径
+        // audio.src = 'http://music.163.com/song/media/outer/url?id=1330348068.mp3'
         audio.play();
         audio.loop = true;
         this.setData({
@@ -43,6 +43,19 @@ Page({
         this.startAnimationInterval();
         // 定时切换
         this.showBlessing();
+    },
+    changeSong(){
+      var audio = this.data.audio;
+      var songIndex = --this.data.songIndex;
+      if (songIndex < 0) {
+          songIndex = this.data.songNum - 1;
+      }
+      audio.src = this.data.audioUrl[songIndex % this.data.songNum]; // src 可以设置 http(s) 的路径，本地文件路径或者代码包文件路径
+      audio.play();
+      audio.loop = true;
+      this.setData({
+          songIndex
+      })
     },
     // 上一首
     previousSong() {

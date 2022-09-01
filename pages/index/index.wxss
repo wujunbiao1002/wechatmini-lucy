@@ -3,6 +3,7 @@
     /*background: url("https://uploadfile.bizhizu.cn/up/72/9f/59/729f5919b2d16f9ee2abf3fda6acc214.gif");*/
     /*background: url("https://img95.699pic.com/photo/40106/1626.gif_wh300.gif");*/
     background: url("http://i2.hdslb.com/bfs/archive/8441942011a2bdb82e5d5cd7501141d4a77a252a.jpg");
+    /* background: url("/static/background.jpg"); */
     background-repeat: no-repeat;
     background-size: cover;
     background-position-x: -700px;
@@ -661,25 +662,25 @@
 
 .roseLeft {
     position: absolute;
-    transform: rotate(350deg);
-    bottom: 10px;
-    left: 10px;
+    /* transform: rotate(350deg); */
+    bottom: -80px;
     height: 123px;
     width: 79px;
+    left: -20px;
 }
 
 .roseLeft2 {
     position: absolute;
-    transform: rotate(30deg);
-    bottom: 10px;
-    left: 10px;
+    /* transform: rotate(30deg); */
+    bottom: -95px;
     height: 123px;
     width: 79px;
+    left: 30px;
 }
 
 .roseLeft3 {
     position: absolute;
-    transform: rotate(70deg);
+    /* transform: rotate(70deg); */
     bottom: 10px;
     left: 10px;
     height: 123px;
@@ -688,18 +689,18 @@
 
 .roseRight {
     position: absolute;
-    transform: rotate(10deg);
-    bottom: 10px;
-    right: 10px;
+    /* transform: rotate(10deg); */
+    bottom: -80px;
+    right: -20px;
     height: 123px;
     width: 79px;
 }
 
 .roseRight2 {
     position: absolute;
-    transform: rotate(-30deg);
-    bottom: 10px;
-    right: 10px;
+    /* transform: rotate(-30deg); */
+    bottom: -95px;
+    right: 30px;
     height: 123px;
     width: 79px;
 }
