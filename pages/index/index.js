@@ -10,15 +10,20 @@ Page({
     data: {
         audioUrl: [
             'http://music.163.com/song/media/outer/url?id=1330348068.mp3',
+            'http://music.163.com/song/media/outer/url?id=19159393.mp3',
             'http://music.163.com/song/media/outer/url?id=1825496057.mp3',
-            'http://music.163.com/song/media/outer/url?id=1808492017.mp3'
+            'http://music.163.com/song/media/outer/url?id=5179544.mp3',
+            'http://music.163.com/song/media/outer/url?id=1808492017.mp3',
+            'http://music.163.com/song/media/outer/url?id=2772113.mp3',
+            'http://music.163.com/song/media/outer/url?id=504265014.mp3',
+            'http://music.163.com/song/media/outer/url?id=1815085049.mp3'
         ],
         dateTime: '',
         animation: '',
         showBlessing: -1,
         audio: '',
         songIndex: 0,
-        songNum: 3,
+        songNum: 8,
         loveNum: 0,
         showLove: false,
     },
